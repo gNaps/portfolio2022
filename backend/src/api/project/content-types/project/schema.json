@@ -57,6 +57,9 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::outcome.outcome"
+    },
+    "year": {
+      "type": "integer"
     }
   }
 }
