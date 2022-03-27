@@ -14,7 +14,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
-const About: NextPage<AboutProps> = ({ about, avatar }) => {
+const About: NextPage<AboutProps> = ({ about, avatar, skills }) => {
   return <Layout></Layout>;
 };
 
