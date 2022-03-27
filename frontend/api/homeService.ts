@@ -1,13 +1,13 @@
 import axios from "axios";
-import { homeQuery, projectsQuery } from "../utils/query.utils";
+import { baseQuery, projectsHomeQuery } from "../utils/query.utils";
 import { HomeProps } from "./models/HomeProps";
 
 export const getHomeData = async (): Promise<HomeProps> => {
   const homeData_res = await axios.get(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/home?${homeQuery}`
+    `${process.env.NEXT_PUBLIC_API_URL}/api/home?${baseQuery}`
   );
   const projectsData_res = await axios.get(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/projects?${projectsQuery}`
+    `${process.env.NEXT_PUBLIC_API_URL}/api/projects?${projectsHomeQuery}`
   );
   const homeData = { ...homeData_res.data.data.attributes };
   const projectData = { ...projectsData_res.data };

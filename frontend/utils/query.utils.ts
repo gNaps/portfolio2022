@@ -8,12 +8,12 @@ const encodeValuesOnly = {
   encodeValuesOnly: true,
 };
 
-export const homeQuery = qs.stringify(
+export const baseQuery = qs.stringify(
   { ...populateAll },
   { ...encodeValuesOnly }
 );
 
-export const projectsQuery = qs.stringify(
+export const projectsHomeQuery = qs.stringify(
   {
     filters: {
       home: {
