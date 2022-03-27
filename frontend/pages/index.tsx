@@ -7,14 +7,20 @@ import Layout from "../components/Layout/Layout";
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const homeData = await getHomeData();
-  console.log("homeData", homeData);
   return {
-    props: {},
+    props: {
+      ...homeData,
+    },
     revalidate: 86400,
   };
 };
 
-const Home: NextPage<HomeProps> = ({ title, avatar, description }) => {
+const Home: NextPage<HomeProps> = ({
+  title,
+  avatar,
+  description,
+  projects,
+}) => {
   return <Layout></Layout>;
 };
 
