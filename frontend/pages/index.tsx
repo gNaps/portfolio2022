@@ -1,5 +1,4 @@
 import type { GetStaticProps, NextPage } from "next";
-import Head from "next/head";
 import Image from "next/image";
 import { getHomeData } from "../api/homeService";
 import { HomeProps } from "../api/models/HomeProps";
