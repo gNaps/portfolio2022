@@ -1,21 +1,21 @@
 import type { GetStaticProps, NextPage } from "next";
 import Image from "next/image";
-import { ProjectsProps } from "../api/models/ProjectsProps";
-import { getProjectsData } from "../api/projectsService";
+import { getAboutData } from "../api/aboutService";
+import { AboutProps } from "../api/models/AboutProps";
 import Layout from "../components/Layout/Layout";
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const projectsData = await getProjectsData();
+  const aboutData = await getAboutData();
   return {
     props: {
-      ...projectsData,
+      ...aboutData,
     },
     revalidate: 86400,
   };
 };
 
-const Projects: NextPage<ProjectsProps> = ({ projects }) => {
+const About: NextPage<AboutProps> = ({ about, avatar }) => {
   return <Layout></Layout>;
 };
 
-export default Projects;
+export default About;
