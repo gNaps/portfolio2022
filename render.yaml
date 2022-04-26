@@ -3,8 +3,8 @@ services:
     name: strapi
     env: node
     plan: free
-    buildCommand: cp backend && yarn install && yarn build
-    startCommand: cp backend && yarn start
+    buildCommand: cd backend && yarn install && yarn build
+    startCommand: cd backend && yarn start
     healthCheckPath: /_health
     envVars:
       - key: NODE_VERSION
