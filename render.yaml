@@ -25,7 +25,3 @@ services:
         generateValue: true
       - key: APP_KEYS
         generateValue: true
-
-databases:
-  - name: strapi
-    plan: starter
