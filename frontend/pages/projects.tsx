@@ -4,9 +4,11 @@ import { ProjectsProps } from "../api/models/ProjectsProps";
 import { getProjectsData } from "../api/projectsService";
 import Layout from "../components/layout/Layout";
 import Project from "../components/shared/Project";
+import { sortList } from "../utils/utils";
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const projectsData = await getProjectsData();
+  projectsData.projects = sortList(projectsData.projects, "year", "desc");
   return {
     props: {
       ...projectsData,

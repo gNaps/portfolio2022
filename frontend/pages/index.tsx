@@ -4,9 +4,11 @@ import { HomeProps } from "../api/models/HomeProps";
 import IndexHeader from "../components/index/IndexHeader";
 import IndexProjects from "../components/index/IndexProjects";
 import Layout from "../components/layout/Layout";
+import { sortList } from "../utils/utils";
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const homeData = await getHomeData();
+  homeData.projects = sortList(homeData.projects, "year", "desc");
   return {
     props: {
       ...homeData,

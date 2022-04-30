@@ -1,8 +1,7 @@
 import axios from "axios";
 import { baseQuery } from "../utils/query.utils";
+import { markdownToHtml } from "../utils/utils";
 import { AboutProps } from "./models/AboutProps";
-import { remark } from "remark";
-import html from "remark-html";
 
 export const getAboutData = async (): Promise<AboutProps> => {
   const aboutData_res = await axios.get(
@@ -23,9 +22,4 @@ export const getAboutData = async (): Promise<AboutProps> => {
     avatar,
     skills: skillsData.data.map((s: any) => s.attributes.name),
   };
-};
-
-export const markdownToHtml = async (markdown: any) => {
-  const result = await remark().use(html).process(markdown);
-  return result.toString();
 };

@@ -24,7 +24,10 @@ const About: NextPage<AboutProps> = ({ about, avatar, skills }) => {
         style={{ backgroundImage: "url(" + avatar + ")" }}
       ></div>
       <h1 className="mb-3">About ⚔️</h1>
-      <div dangerouslySetInnerHTML={{ __html: about }}></div>
+      <div
+        className="paragraph"
+        dangerouslySetInnerHTML={{ __html: about }}
+      ></div>
       <div className="flex items-center mt-3">
         <Link href={`/resume`}>View my resume</Link>
         <Image
