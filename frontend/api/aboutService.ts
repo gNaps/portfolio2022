@@ -15,7 +15,6 @@ export const getAboutData = async (): Promise<AboutProps> => {
     `${process.env.NEXT_PUBLIC_API_URL}/api/skills`
   );
   const skillsData = { ...skillsData_res.data };
-  console.log(skillsData);
 
   return {
     about,

@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Project = ({ project }: any) => {
-  console.log(project);
   return (
     <>
       <div className="flex items-center my-5">
