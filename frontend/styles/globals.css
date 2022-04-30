@@ -37,3 +37,7 @@ h1 {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.6rem;
 }
+
+.bg-secondary {
+  background-color: rgba(255, 255, 255, 0.08);
+}
