@@ -26,3 +26,19 @@ export const projectsHomeQuery = qs.stringify(
     ...encodeValuesOnly,
   }
 );
+
+export const projectDetailQuery = (slug: string) => {
+  return qs.stringify(
+    {
+      filters: {
+        slug: {
+          $eq: slug,
+        },
+      },
+      ...populateAll,
+    },
+    {
+      ...encodeValuesOnly,
+    }
+  );
+};

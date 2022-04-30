@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
 
 const Layout = (props: any) => {
   return (
@@ -9,7 +11,9 @@ const Layout = (props: any) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Gabriele Napoli</title>
       </Head>
-      <main className="w-96 min-h-screen">{props.children}</main>
+      <Navbar />
+      <main className="w-140 m-auto">{props.children}</main>
+      <Footer />
     </>
   );
 };

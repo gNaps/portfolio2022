@@ -1,8 +1,9 @@
 import type { GetStaticProps, NextPage } from "next";
-import Image from "next/image";
 import { getHomeData } from "../api/homeService";
 import { HomeProps } from "../api/models/HomeProps";
-import Layout from "../components/Layout/Layout";
+import IndexHeader from "../components/index/IndexHeader";
+import IndexProjects from "../components/index/IndexProjects";
+import Layout from "../components/layout/Layout";
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const homeData = await getHomeData();
@@ -20,7 +21,18 @@ const Home: NextPage<HomeProps> = ({
   description,
   projects,
 }) => {
-  return <Layout></Layout>;
+  return (
+    <Layout>
+      <IndexHeader
+        avatar={avatar}
+        title={title}
+        description={description}
+      ></IndexHeader>
+      <div className="mt-16">
+        <IndexProjects projects={projects}></IndexProjects>
+      </div>
+    </Layout>
+  );
 };
 
 export default Home;

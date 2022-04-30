@@ -1,14 +1,16 @@
 import axios from "axios";
 import { baseQuery } from "../utils/query.utils";
 import { AboutProps } from "./models/AboutProps";
+import { remark } from "remark";
+import html from "remark-html";
 
 export const getAboutData = async (): Promise<AboutProps> => {
   const aboutData_res = await axios.get(
     `${process.env.NEXT_PUBLIC_API_URL}/api/about?${baseQuery}`
   );
   const aboutData = { ...aboutData_res.data.data.attributes };
-  const { about } = aboutData;
-  const avatar = `${process.env.NEXT_PUBLIC_API_URL}${aboutData.avatar.data.attributes.url}`;
+  const about = await markdownToHtml(aboutData.about);
+  const avatar = `${aboutData.avatar.data.attributes.url}`;
 
   const skillsData_res = await axios.get(
     `${process.env.NEXT_PUBLIC_API_URL}/api/skills`
@@ -21,4 +23,9 @@ export const getAboutData = async (): Promise<AboutProps> => {
     avatar,
     skills: skillsData.data.map((s: any) => s.attributes.name),
   };
+};
+
+export const markdownToHtml = async (markdown: any) => {
+  const result = await remark().use(html).process(markdown);
+  return result.toString();
 };
