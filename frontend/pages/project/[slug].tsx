@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import Image from "next/image";
-import Layout from "../../components/layout/Layout";
+import Layout from "../../components/Layout/Layout";
 import { getProjectData, getProjectsData } from "../../api/projectsService";
 import styles from "../../styles/Project.module.scss";
 import Link from "next/link";

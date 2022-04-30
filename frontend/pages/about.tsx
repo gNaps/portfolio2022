@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { getAboutData } from "../api/aboutService";
 import { AboutProps } from "../api/models/AboutProps";
-import Layout from "../components/layout/Layout";
+import Layout from "../components/Layout/Layout";
 import { getRandomEmoji } from "../utils/utils";
 
 export const getStaticProps: GetStaticProps = async (context) => {
