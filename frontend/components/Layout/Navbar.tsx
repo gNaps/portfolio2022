@@ -8,7 +8,9 @@ const Navbar = () => {
   return (
     <>
       <nav className="mt-12 mb-24">
-        <ul className={`list-none flex justify-center gap-10 ${styles.navbar}`}>
+        <ul
+          className={`list-none flex justify-center gap-5 sm:gap-10 ${styles.navbar}`}
+        >
           <li className={router.pathname === "/" ? `${styles.active}` : ""}>
             <Link href="/">Gabriele Napoli</Link>
           </li>

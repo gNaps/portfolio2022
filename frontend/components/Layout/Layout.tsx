@@ -8,11 +8,13 @@ const Layout = (props: any) => {
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Gabriele Napoli Website" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Gabriele Napoli</title>
       </Head>
       <Navbar />
-      <main className="w-140 m-auto">{props.children}</main>
+      <main className="w-100 lg:w-140 px-5 lg:px-0 m-auto">
+        {props.children}
+      </main>
       <Footer />
     </>
   );
