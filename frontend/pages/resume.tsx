@@ -1,7 +1,7 @@
 import type { GetStaticProps, NextPage } from "next";
 import { ResumeProps } from "../api/models/ResumeProps";
 import { getResumeData } from "../api/resumeService";
-import Layout from "../components/Layout/Layout";
+import Layout from "../components/layoutapp/Layout";
 import Education from "../components/resume/Education";
 import Job from "../components/resume/Job";
 import { markdownToHtml } from "../utils/utils";

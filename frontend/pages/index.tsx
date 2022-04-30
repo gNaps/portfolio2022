@@ -1,9 +1,9 @@
 import type { GetStaticProps, NextPage } from "next";
 import { getHomeData } from "../api/homeService";
 import { HomeProps } from "../api/models/HomeProps";
-import IndexHeader from "../components/IndexHeader/IndexHeader";
-import IndexProjects from "../components/IndexProjects/IndexProjects";
-import Layout from "../components/Layout/Layout";
+import IndexHeader from "../components/index/IndexHeader";
+import IndexProjects from "../components/index/IndexProjects";
+import Layout from "../components/layoutapp/Layout";
 import { sortList } from "../utils/utils";
 
 export const getStaticProps: GetStaticProps = async (context) => {
