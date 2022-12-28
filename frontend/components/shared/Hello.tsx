@@ -8,9 +8,7 @@ const Hello = () => {
   return (
     <>
       <div
-        className={`${styles.container} ${
-          theme === "dark" ? styles.containerDark : ""
-        } rounded-lg flex flex-col-reverse md:flex-row items-center justify-center gap-0 md:gap-5 p-3 my-5`}
+        className={`${styles.container} rounded-lg flex flex-col-reverse md:flex-row items-center justify-center gap-0 md:gap-5 p-3 my-5`}
       >
         <div>
           <h1 className={styles.title}>Say Hi!</h1>

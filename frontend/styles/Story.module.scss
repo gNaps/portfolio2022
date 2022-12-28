@@ -5,14 +5,10 @@
 
 .description {
   font-size: 0.8rem;
-  color: rgba(34, 36, 44, 0.6);
-}
-
-.descriptionDark {
-  color: rgba(236, 237, 238, 0.6);
+  color: var(--text-secondary-1);
 }
 
 .date {
   font-size: 0.75rem;
-  color: rgba(114, 120, 136, 0.6);
+  color: var(--text-secondary-2);
 }

@@ -8,9 +8,7 @@ const Project = ({ project }: any) => {
     <>
       <Link href={`project/${project.slug}`}>
         <div
-          className={`p-2 flex md:flex-col gap-5 md:gap-0 items-center px-5 md:px-0 ${
-            styles.container
-          } ${theme === "dark" ? styles.dark : ""}`}
+          className={`p-2 flex md:flex-col gap-5 md:gap-0 items-center px-5 md:px-0 ${styles.container}`}
         >
           <div
             className="w-24 md:w-40 h-24 md:h-40 rounded bg-cover	bg-center"
@@ -18,13 +16,7 @@ const Project = ({ project }: any) => {
           ></div>
           <div className="px-2">
             <p className={styles.title}>{project.title}</p>
-            <p
-              className={`${styles.description} ${
-                theme === "dark" ? styles.descriptionDark : ""
-              }`}
-            >
-              {project.description}
-            </p>
+            <p className={styles.description}>{project.description}</p>
           </div>
         </div>
       </Link>
