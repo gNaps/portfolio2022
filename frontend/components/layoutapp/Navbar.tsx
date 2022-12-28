@@ -33,10 +33,10 @@ const Navbar = () => {
           </li>
           <li
             className={
-              router.pathname.startsWith("/project") ? `${styles.active}` : ""
+              router.pathname.startsWith("/about") ? `${styles.active}` : ""
             }
           >
-            <Link href="/projects">about</Link>
+            <Link href="/about">about</Link>
           </li>
           <li
             className={router.pathname === "/about" ? `${styles.active}` : ""}

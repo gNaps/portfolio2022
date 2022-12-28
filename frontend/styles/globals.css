@@ -67,3 +67,81 @@ a:hover {
   text-transform: uppercase;
   color: var(--text-secondary-2);
 }
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.page-title-about {
+  background: linear-gradient(73.19deg, #dc79ff 0%, #256bfa 95.06%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.page-title-work {
+  background: linear-gradient(
+    270deg,
+    #fa6e6e 0%,
+    #a3387e 48.88%,
+    #224d88 97.75%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.page-title-story {
+  background: linear-gradient(90deg, #8d2de3 0%, #ff2497 97.34%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.page-title-stack {
+  background: linear-gradient(
+    90.42deg,
+    #4ab1f1 0.58%,
+    #566cec 37.22%,
+    #d749af 73.87%,
+    #ff7c51 112.26%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.page-title-timeline {
+  background: linear-gradient(
+    90deg,
+    #dc36fa 0%,
+    #a167ef 25%,
+    #609fe4 50%,
+    #3abfde 75%,
+    #04d18e 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.page-title-bookshelf {
+  background: linear-gradient(
+    258.32deg,
+    #fbfbfd 0%,
+    #e795b7 32.71%,
+    #935893 65.43%,
+    #224d88 98.14%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.page-subtitle {
+  text-align: center;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
