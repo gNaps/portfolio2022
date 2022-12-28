@@ -3,4 +3,5 @@ export interface HomeProps {
   description: string;
   avatar: string;
   projects: any[];
+  stories: any[];
 }

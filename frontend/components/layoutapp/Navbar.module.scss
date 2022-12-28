@@ -1,13 +1,35 @@
+.nav {
+  background: rgba(28, 22, 47, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+}
+
 ul.navbar {
+  a {
+    font-size: medium;
+  }
+
   .active {
     a {
-      color: #fff !important;
+      background: linear-gradient(
+        90deg,
+        #f06844 0%,
+        #ee4c54 25%,
+        #d45e95 50%,
+        #9c6ca6 75%,
+        #6583c1 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      font-weight: 700;
     }
   }
 
   li {
     a {
-      color: rgba(255, 255, 255, 0.5);
+      color: #fff;
     }
   }
 }

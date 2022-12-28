@@ -1,37 +1,119 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "./Navbar.module.scss";
+import { BiChevronDown } from "react-icons/bi";
+import {
+  FiGithub,
+  FiInstagram,
+  FiLinkedin,
+  FiSun,
+  FiMoon,
+  FiMenu,
+} from "react-icons/fi";
+import { RxDividerVertical } from "react-icons/rx";
 
 const Navbar = () => {
   const router = useRouter();
 
   return (
     <>
-      <nav className="mt-12 mb-24">
+      <nav
+        className={`mx-auto mt-8 p-3 flex justify-between gap-12 ${styles.nav}`}
+      >
         <ul
-          className={`list-none flex justify-center gap-5 sm:gap-10 ${styles.navbar}`}
+          className={`list-none hidden md:flex justify-center items-center gap-6 ${styles.navbar}`}
         >
           <li className={router.pathname === "/" ? `${styles.active}` : ""}>
-            <Link href="/">Gabriele Napoli</Link>
+            <Link href="/">gn</Link>
           </li>
           <li
             className={
               router.pathname.startsWith("/project") ? `${styles.active}` : ""
             }
           >
-            <Link href="/projects">Projects</Link>
+            <Link href="/projects">about</Link>
           </li>
           <li
             className={router.pathname === "/about" ? `${styles.active}` : ""}
           >
-            <Link href="/about">About</Link>
+            <Link href="/about">work</Link>
           </li>
           <li
             className={router.pathname == "/resume" ? `${styles.active}` : ""}
           >
-            <Link href="/resume">Resume</Link>
+            <Link href="/resume">story</Link>
+          </li>
+          <li
+            className={router.pathname == "/resume" ? `${styles.active}` : ""}
+          >
+            <Link href="/resume">timeline</Link>
+          </li>
+          <div className="dropdown">
+            <label tabIndex={0} className="m-1 flex items-center gap-1">
+              more
+              <BiChevronDown />
+            </label>
+            <ul
+              tabIndex={0}
+              className={`dropdown-content menu mt-4 p-2 rounded bg-black`}
+            >
+              <li>
+                <a>booshelf</a>
+              </li>
+              <li>
+                <a>stack</a>
+              </li>
+              <li>
+                <a>links</a>
+              </li>
+            </ul>
+          </div>
+        </ul>
+        <ul
+          className={`list-none md:hidden justify-center items-center gap-6 ${styles.navbar}`}
+        >
+          <li className={router.pathname === "/" ? `${styles.active}` : ""}>
+            <Link href="/">GN</Link>
           </li>
         </ul>
+        <div className="flex justify-center items-center gap-3 text-lg">
+          <FiGithub />
+          <FiInstagram />
+          <FiLinkedin />
+          <RxDividerVertical className="opacity-25 text-xl" />
+          <FiMoon />
+          <div className="dropdown md:hidden">
+            <label tabIndex={0} className="m-1 flex items-center gap-1">
+              <FiMenu />
+            </label>
+            <ul
+              tabIndex={0}
+              className={`dropdown-content menu mt-4 p-2 rounded bg-black`}
+            >
+              <li>
+                <a>about</a>
+              </li>
+              <li>
+                <a>work</a>
+              </li>
+              <li>
+                <a>story</a>
+              </li>
+              <li>
+                <a>timeline</a>
+              </li>
+              <li>
+                <a>booshelf</a>
+              </li>
+              <li>
+                <a>stack</a>
+              </li>
+              <li>
+                <a>links</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </>
   );

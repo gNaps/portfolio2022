@@ -1,5 +1,26 @@
-.avatar {
-  background-color: #2e2e2e;
-  width: 80px;
-  height: 80px;
+.title {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.subtitle {
+  color: rgba(114, 120, 136, 0.6);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.specialLinks {
+  background: linear-gradient(
+    90.42deg,
+    #4ab1f1 0.58%,
+    #566cec 37.22%,
+    #d749af 73.87%,
+    #ff7c51 112.26%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 600;
+  font-size: 0.9rem;
 }

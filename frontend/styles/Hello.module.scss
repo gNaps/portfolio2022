@@ -1,0 +1,47 @@
+.container {
+  background: linear-gradient(
+    90deg,
+    rgba(30, 28, 50, 0.5) 0%,
+    rgba(43, 22, 29, 0.55) 100%
+  );
+}
+
+.title {
+  font-weight: 700;
+  font-size: 2rem;
+  background: linear-gradient(
+    90deg,
+    #f06844 0%,
+    #ee4c54 25%,
+    #d45e95 50%,
+    #9c6ca6 75%,
+    #6583c1 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.blueColor {
+  background: linear-gradient(90deg, #1584eb 0%, #24d6d9 97.34%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.redColor {
+  background: linear-gradient(
+    90deg,
+    #f06844 0%,
+    #ee4c54 25%,
+    #d45e95 50%,
+    #9c6ca6 75%,
+    #6583c1 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}

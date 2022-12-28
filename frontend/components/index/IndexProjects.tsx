@@ -4,10 +4,12 @@ import Project from "../shared/Project";
 const IndexProjects = ({ projects }: Partial<HomeProps>) => {
   return (
     <>
-      <p>Projects ✨</p>
-      {projects?.map((p) => (
-        <Project key={p.id} project={p} />
-      ))}
+      <p className="navigator-title">Featured projects</p>
+      <div className="grid md:grid-cols-1 md:grid-cols-3 gap-4">
+        {projects?.map((p) => (
+          <Project key={p.slug} project={p} />
+        ))}
+      </div>
     </>
   );
 };

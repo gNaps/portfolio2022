@@ -1,30 +1,34 @@
 import Image from "next/image";
 import Link from "next/link";
+import styles from "../../styles/Footer.module.scss";
 
 const Footer = () => {
   return (
     <>
-      <div className="flex items-center justify-center gap-14 mt-24 pb-5">
-        <Link href={"https://github.com/gNaps"}>
-          <a className="social-animation">
-            <Image src="/github.svg" alt="github" width={56} height={56} />
-          </a>
-        </Link>
-        <Link href={"https://www.linkedin.com/in/gabriele-napoli-a87529185"}>
-          <a className="social-animation">
-            <Image src="/linkedin.svg" alt="linkedin" width={56} height={56} />
-          </a>
-        </Link>
-        <Link href={"https://www.instagram.com/napsryu"}>
-          <a className="social-animation">
-            <Image
-              src="/instagram.svg"
-              alt="instagram"
-              width={56}
-              height={56}
-            />
-          </a>
-        </Link>
+      <div className="flex flex-col items-center justify-center gap-4 mt-16">
+        <p className={styles.text}>© napsryu ✦ Gabriele Napoli</p>
+        <div className={`flex gap-3 ${styles.text}`}>
+          <Link href="/about">about</Link>
+          <Link href="/work">work</Link>
+          <Link href="/story">story</Link>
+          <Link href="/timeline">timeline</Link>
+          <Link href="/links">links</Link>
+        </div>
+      </div>
+      <div className="flex items-center justify-center gap-10 mt-7 pb-5">
+        <Image
+          src="/decorator-rx.svg"
+          alt="decorator"
+          width={147}
+          height={14}
+        />
+        <p className={styles.quote}>Thank you</p>
+        <Image
+          src="/decorator-lx.svg"
+          alt="decorator"
+          width={147}
+          height={14}
+        />
       </div>
     </>
   );

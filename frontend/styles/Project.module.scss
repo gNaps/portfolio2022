@@ -1,15 +1,22 @@
+.container {
+  border-radius: 18px;
+  &:hover {
+    background: linear-gradient(
+      90deg,
+      rgba(30, 28, 50, 0.5) 0%,
+      rgba(43, 22, 29, 0.55) 100%
+    );
+  }
+  cursor: pointer;
+}
+
 .title {
-  font-size: 3.5rem;
-  font-weight: bolder;
-  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-top: 0.75rem;
 }
 
-.subtitle {
-  font-weight: bold;
-}
-
-.stack,
-.outcome {
+.description {
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(236, 237, 238, 0.6);
 }
