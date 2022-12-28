@@ -3,11 +3,21 @@
   &:hover {
     background: linear-gradient(
       90deg,
+      rgba(255, 233, 244, 0.3) 0%,
+      rgba(234, 243, 255, 0.5) 100%
+    );
+  }
+  cursor: pointer;
+}
+
+.dark {
+  &:hover {
+    background: linear-gradient(
+      90deg,
       rgba(30, 28, 50, 0.5) 0%,
       rgba(43, 22, 29, 0.55) 100%
     );
   }
-  cursor: pointer;
 }
 
 .title {
@@ -18,5 +28,9 @@
 
 .description {
   font-size: 0.8rem;
+  color: rgba(34, 36, 44, 0.6);
+}
+
+.descriptionDark {
   color: rgba(236, 237, 238, 0.6);
 }

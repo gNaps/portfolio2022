@@ -1,7 +1,12 @@
 .nav {
-  background: rgba(28, 22, 47, 0.2);
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(12px);
   border-radius: 12px;
+  &.dark {
+    background: rgba(28, 22, 47, 0.2);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+  }
 }
 
 ul.navbar {
@@ -24,12 +29,6 @@ ul.navbar {
       background-clip: text;
       text-fill-color: transparent;
       font-weight: 700;
-    }
-  }
-
-  li {
-    a {
-      color: #fff;
     }
   }
 }

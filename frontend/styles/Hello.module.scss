@@ -1,6 +1,14 @@
 .container {
   background: linear-gradient(
     90deg,
+    rgba(255, 233, 244, 0.3) 0%,
+    rgba(234, 243, 255, 0.5) 100%
+  );
+}
+
+.containerDark {
+  background: linear-gradient(
+    90deg,
     rgba(30, 28, 50, 0.5) 0%,
     rgba(43, 22, 29, 0.55) 100%
   );

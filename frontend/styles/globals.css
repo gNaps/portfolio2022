@@ -10,6 +10,13 @@ body {
   font-family: "Inter", sans-serif;
   background: url("/backgrounds/top-gradient-dark.svg") center top no-repeat,
     url("/backgrounds/bottom-gradient-dark.svg") center bottom no-repeat,
+    url("/backgrounds/light.svg") repeat;
+  color: #22242c;
+}
+
+body.dark {
+  background: url("/backgrounds/top-gradient-dark.svg") center top no-repeat,
+    url("/backgrounds/bottom-gradient-dark.svg") center bottom no-repeat,
     url("/backgrounds/dark.svg") repeat;
   color: #fff;
 }
