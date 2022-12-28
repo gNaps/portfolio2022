@@ -5,7 +5,7 @@ import Link from "next/link";
 const IndexHeader = () => {
   return (
     <>
-      <div className="flex items-center gap-3 mt-5">
+      <div className="flex items-center gap-3 mt-8">
         <Image
           src="/avatar-home.png"
           alt="Gabriele Napoli"

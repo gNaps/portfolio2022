@@ -97,7 +97,9 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className={`dropdown-content menu mt-4 p-2 rounded bg-black`}
+              className={`dropdown-content menu mt-4 p-2 rounded  ${
+                theme === "dark" ? "bg-black" : "bg-white"
+              }`}
             >
               <li>
                 <a>about</a>
