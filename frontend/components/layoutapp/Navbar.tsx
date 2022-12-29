@@ -11,12 +11,11 @@ import {
   FiMenu,
 } from "react-icons/fi";
 import { RxDividerVertical } from "react-icons/rx";
-import { useTheme, useToggleTheme } from "../../context/ThemeContext";
+import useDarkMode from "use-dark-mode";
 
 const Navbar = () => {
   const router = useRouter();
-  const theme = useTheme();
-  const toggleTheme = useToggleTheme();
+  const darkMode = useDarkMode();
 
   return (
     <>
@@ -102,10 +101,10 @@ const Navbar = () => {
             </a>
           </Link>
           <RxDividerVertical className="opacity-25 text-xl" />
-          {theme === "light" ? (
-            <FiMoon onClick={() => toggleTheme("dark")} />
+          {darkMode.value === false ? (
+            <FiMoon onClick={() => darkMode.enable()} />
           ) : (
-            <FiSun onClick={() => toggleTheme("light")} />
+            <FiSun onClick={() => darkMode.disable()} />
           )}
           <div className="dropdown md:hidden">
             <label tabIndex={0} className="m-1 flex items-center gap-1">
@@ -114,7 +113,7 @@ const Navbar = () => {
             <ul
               tabIndex={0}
               className={`dropdown-content menu mt-4 p-2 rounded  ${
-                theme === "dark" ? "bg-black" : "bg-white"
+                darkMode.value ? "bg-black" : "bg-white"
               }`}
             >
               <li>

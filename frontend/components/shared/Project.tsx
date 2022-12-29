@@ -1,9 +1,7 @@
 import Link from "next/link";
-import { useTheme } from "../../context/ThemeContext";
 import styles from "../../styles/Project.module.scss";
 
 const Project = ({ project }: any) => {
-  const theme = useTheme();
   return (
     <>
       <Link href={project.url} passHref={true}>
