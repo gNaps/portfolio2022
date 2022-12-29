@@ -1,8 +1,10 @@
 import { FiInstagram, FiMail } from "react-icons/fi";
 import Image from "next/image";
 import styles from "../../styles/Hello.module.scss";
+import { useTheme } from "../../context/ThemeContext";
 
 const Hello = () => {
+  const theme = useTheme();
   return (
     <>
       <div

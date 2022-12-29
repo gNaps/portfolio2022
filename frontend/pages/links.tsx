@@ -5,9 +5,9 @@ import stylesIndex from "../styles/IndexHeader.module.scss";
 import Link from "next/link";
 import { FiGithub, FiInstagram, FiLinkedin } from "react-icons/fi";
 import { IconContext } from "react-icons";
+import { useTheme } from "../context/ThemeContext";
 import { links } from "../api/link.data";
 import { LinkProps } from "../api/models/LinkProps";
-import useDarkMode from "use-dark-mode";
 
 export const getStaticProps: GetStaticProps = async (context) => {
   return {
@@ -28,7 +28,7 @@ const getIcon = (social: "Github" | "Instagram" | "Linkedin") => {
 };
 
 const Links = ({ links }: LinkProps) => {
-  const darkMode = useDarkMode();
+  const theme = useTheme();
   return (
     <Layout>
       <div className="flex flex-col items-center justify-center mt-8">
@@ -64,9 +64,7 @@ const Links = ({ links }: LinkProps) => {
                     {l.name}
                   </div>
                   <Image
-                    src={`/angle-arrow-${
-                      darkMode.value ? "dark" : "light"
-                    }.svg`}
+                    src={`/angle-arrow-${theme}.svg`}
                     alt="open link"
                     width={20}
                     height={20}
@@ -76,6 +74,33 @@ const Links = ({ links }: LinkProps) => {
               </a>
             </Link>
           ))}
+
+          {/* <div className="rounded border border-black dark:border-white w-80 flex justify-between items-center px-3 py-2 mb-5 cursor-pointer">
+            <div className="flex gap-2 items-center">
+              <FiInstagram />
+              Instagram
+            </div>
+            <Image
+              src={`/angle-arrow-${theme}.svg`}
+              alt="open link"
+              width={20}
+              height={20}
+              layout={"fixed"}
+            />
+          </div>
+          <div className="rounded border border-black dark:border-white w-80 flex justify-between items-center px-3 py-2 mb-5 cursor-pointer">
+            <div className="flex gap-2 items-center">
+              <FiLinkedin />
+              Linkedin
+            </div>
+            <Image
+              src={`/angle-arrow-${theme}.svg`}
+              alt="open link"
+              width={20}
+              height={20}
+              layout={"fixed"}
+            />
+          </div> */}
         </IconContext.Provider>
       </div>
     </Layout>

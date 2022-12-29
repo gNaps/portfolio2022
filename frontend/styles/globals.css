@@ -23,7 +23,7 @@ body {
   --bg-navbar: rgba(255, 255, 255, 0.2);
 }
 
-body.dark-mode {
+body.dark {
   background: url("/backgrounds/top-gradient-dark.svg") center top no-repeat,
     url("/backgrounds/bottom-gradient-dark.svg") center bottom no-repeat,
     url("/backgrounds/dark.svg") repeat;
