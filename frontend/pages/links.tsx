@@ -5,9 +5,9 @@ import stylesIndex from "../styles/IndexHeader.module.scss";
 import Link from "next/link";
 import { FiGithub, FiInstagram, FiLinkedin } from "react-icons/fi";
 import { IconContext } from "react-icons";
-import { useTheme } from "../context/ThemeContext";
 import { links } from "../api/link.data";
 import { LinkProps } from "../api/models/LinkProps";
+import { useTheme } from "next-themes";
 
 export const getStaticProps: GetStaticProps = async (context) => {
   return {
@@ -28,7 +28,7 @@ const getIcon = (social: "Github" | "Instagram" | "Linkedin") => {
 };
 
 const Links = ({ links }: LinkProps) => {
-  const theme = useTheme();
+  const { theme, resolvedTheme } = useTheme();
   return (
     <Layout>
       <div className="flex flex-col items-center justify-center mt-8">
@@ -64,7 +64,7 @@ const Links = ({ links }: LinkProps) => {
                     {l.name}
                   </div>
                   <Image
-                    src={`/angle-arrow-${theme}.svg`}
+                    src={`/angle-arrow-${resolvedTheme}.svg`}
                     alt="open link"
                     width={20}
                     height={20}
