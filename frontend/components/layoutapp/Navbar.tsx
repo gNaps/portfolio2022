@@ -54,7 +54,9 @@ const Navbar = () => {
             <ul
               tabIndex={0}
               className={`dropdown-content menu mt-4 p-2 rounded  ${
-                theme === "dark" ? "bg-black" : "bg-white"
+                theme === "dark" || resolvedTheme === "dark"
+                  ? "bg-black"
+                  : "bg-white"
               }`}
             >
               <li>
@@ -115,7 +117,9 @@ const Navbar = () => {
             <ul
               tabIndex={0}
               className={`dropdown-content menu mt-4 p-2 rounded  ${
-                theme === "dark" ? "bg-black" : "bg-white"
+                theme === "dark" || resolvedTheme === "dark"
+                  ? "bg-black"
+                  : "bg-white"
               }`}
             >
               <li>
