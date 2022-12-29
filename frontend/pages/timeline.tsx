@@ -1,5 +1,6 @@
 import type { GetStaticProps, NextPage } from "next";
 import { events } from "../api/events.data";
+import { TimelineProps } from "../api/models/TimelineProps";
 import Layout from "../components/layoutapp/Layout";
 import Job from "../components/shared/Job";
 import { sortList } from "../utils/utils";
@@ -12,7 +13,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
-const Timeline = ({ events }: any) => {
+const Timeline = ({ events }: TimelineProps) => {
   return (
     <Layout>
       <div className="flex flex-col items-center justify-center mt-8">

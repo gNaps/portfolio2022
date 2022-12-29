@@ -1,5 +1,4 @@
 import type { GetStaticProps, NextPage } from "next";
-import { getHomeData } from "../api/homeService";
 import { HomeProps } from "../api/models/HomeProps";
 import { projects } from "../api/projects.data";
 import { story } from "../api/story.data";
@@ -8,17 +7,13 @@ import IndexProjects from "../components/index/IndexProjects";
 import IndexStories from "../components/index/IndexStories";
 import Layout from "../components/layoutapp/Layout";
 import Hello from "../components/shared/Hello";
-import { sortList } from "../utils/utils";
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  //const homeData = await getHomeData();
-  //homeData.projects = sortList(homeData.projects, "year", "desc");
+export const getStaticProps: GetStaticProps<HomeProps> = async (context) => {
   return {
     props: {
       projects: projects.filter((p) => p.isHome),
       stories: story.filter((s) => s.isHome),
     },
-    //revalidate: 86400,
   };
 };
 

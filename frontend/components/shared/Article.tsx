@@ -6,8 +6,10 @@ const Article = ({ story }: any) => {
   const theme = useTheme();
   return (
     <div className="mb-10">
-      <Link href={`project/${story.slug}`}>
-        <a className={styles.title}>{story.title}</a>
+      <Link href={story.url} passHref={true}>
+        <a className={styles.title} target={"_blank"}>
+          {story.title}
+        </a>
       </Link>
       <p className={styles.description}>{story.description}</p>
       <p className={styles.date}>{story.date}</p>

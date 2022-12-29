@@ -6,24 +6,13 @@ import Link from "next/link";
 import { FiGithub, FiInstagram, FiLinkedin } from "react-icons/fi";
 import { IconContext } from "react-icons";
 import { useTheme } from "../context/ThemeContext";
+import { links } from "../api/link.data";
+import { LinkProps } from "../api/models/LinkProps";
 
 export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {
-      links: [
-        {
-          url: "https://github.com/gNaps",
-          name: "Github",
-        },
-        {
-          url: "https://www.instagram.com/napsryu",
-          name: "Instagram",
-        },
-        {
-          url: "https://www.linkedin.com/in/gabriele-napoli-a87529185",
-          name: "Linkedin",
-        },
-      ],
+      links: links,
     },
   };
 };
@@ -38,7 +27,7 @@ const getIcon = (social: "Github" | "Instagram" | "Linkedin") => {
   );
 };
 
-const Links = ({ links }: any) => {
+const Links = ({ links }: LinkProps) => {
   const theme = useTheme();
   return (
     <Layout>

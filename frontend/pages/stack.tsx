@@ -1,5 +1,4 @@
-import type { GetStaticProps, NextPage } from "next";
-import { ProjectsProps } from "../api/models/ProjectsProps";
+import type { NextPage } from "next";
 import Layout from "../components/layoutapp/Layout";
 import { FaAngular, FaNodeJs, FaReact } from "react-icons/fa";
 import {
@@ -19,14 +18,7 @@ import { FiFigma } from "react-icons/fi";
 import { IconContext } from "react-icons";
 import Image from "next/image";
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  return {
-    props: {},
-  };
-};
-
-const Stack: NextPage<ProjectsProps> = ({ projects }) => {
-  console.log("projects", projects);
+const Stack: NextPage<void> = () => {
   return (
     <Layout>
       <div className="flex flex-col items-center justify-center mt-8">

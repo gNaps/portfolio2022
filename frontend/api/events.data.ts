@@ -1,3 +1,14 @@
+export interface Event {
+  id: number;
+  title: string;
+  description: string;
+  date: string;
+  type: {
+    key: string;
+    value: string;
+  };
+}
+
 export const events = [
   {
     id: 1,

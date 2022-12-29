@@ -1,23 +1,7 @@
-import type { GetStaticProps, NextPage } from "next";
-import { ProjectsProps } from "../api/models/ProjectsProps";
-import { projects } from "../api/projects.data";
+import type { NextPage } from "next";
 import Layout from "../components/layoutapp/Layout";
-import Project from "../components/shared/Project";
-import Image from "next/image";
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  //const projectsData = await getProjectsData();
-  //projectsData.projects = sortList(projectsData.projects, "year", "desc");
-  return {
-    props: {
-      projects: projects,
-    },
-    //revalidate: 86400,
-  };
-};
-
-const Bookshelf: NextPage<ProjectsProps> = ({ projects }) => {
-  console.log("projects", projects);
+const Bookshelf: NextPage<void> = () => {
   return (
     <Layout>
       <div className="flex flex-col items-center justify-center mt-8">

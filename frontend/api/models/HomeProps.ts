@@ -1,7 +1,7 @@
+import { Projects } from "../projects.data";
+import { Story } from "../story.data";
+
 export interface HomeProps {
-  title: string;
-  description: string;
-  avatar: string;
-  projects: any[];
-  stories: any[];
+  projects: Projects[];
+  stories: Story[];
 }

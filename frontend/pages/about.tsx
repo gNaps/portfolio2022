@@ -1,19 +1,5 @@
-import type { GetStaticProps, NextPage } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import { getAboutData } from "../api/aboutService";
-import { AboutProps } from "../api/models/AboutProps";
 import Layout from "../components/layoutapp/Layout";
 import Hello from "../components/shared/Hello";
-import { getRandomEmoji } from "../utils/utils";
-
-export const getStaticProps: GetStaticProps = async (context) => {
-  // const aboutData = await getAboutData();
-  return {
-    props: {},
-    //revalidate: 86400,
-  };
-};
 
 const About = () => {
   return (
