@@ -15,7 +15,7 @@ const Project = ({ project }: any) => {
               className="w-24 md:w-40 h-24 md:h-40 rounded bg-cover	bg-center"
               style={{ backgroundImage: `url('${project.image}')` }}
             ></div>
-            <div className="px-2">
+            <div className="px-2 flex-1">
               <p className={styles.title}>{project.title}</p>
               <p className={styles.description}>{project.description}</p>
             </div>
