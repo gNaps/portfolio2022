@@ -135,7 +135,6 @@ const Navbar = () => {
                 <Link href="/timeline">timeline</Link>
               </li>
               <li>
-                <a>booshelf</a>
                 <Link href="/bookshelf">bookshelf</Link>
               </li>
               <li>
