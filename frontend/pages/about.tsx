@@ -28,8 +28,8 @@ const About = () => {
         ></div>
         <p className="navigator-title">Finally, a picture of me</p>
         <p className="mt-6">
-          I still remember my first day at work when I didn't even know how to
-          write a query in sql. Today, after five years of experience, I am a
+          I still remember my first day at work when I didn&#39;t even know how
+          to write a query in sql. Today, after five years of experience, I am a
           full stack developer. Throughout my career, I have worked on numerous
           projects using various technologies. Both in close contact with the
           end customer and in agile teams. I’ve worked for consulting, for

@@ -1,15 +1,15 @@
 import { HomeProps } from "../../api/models/HomeProps";
-import Story from "../shared/Story";
+import Article from "../shared/Article";
 
-const IndexStories = ({ stories }: Partial<HomeProps>) => {
+const IndexArticles = ({ stories }: Partial<HomeProps>) => {
   return (
     <>
       <p className="navigator-title">Recent stories</p>
       {stories?.map((s) => (
-        <Story key={s.slug} story={s} />
+        <Article key={s.slug} story={s} />
       ))}
     </>
   );
 };
 
-export default IndexStories;
+export default IndexArticles;

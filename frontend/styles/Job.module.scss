@@ -1,0 +1,23 @@
+.date {
+  min-width: 80px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.type {
+  padding: 0.25rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.job {
+  background: linear-gradient(270deg, #c3c2ff 0%, #9dbeff 100%);
+  color: #1c309d;
+}
+
+.education {
+  background: linear-gradient(270deg, #fbceff 0%, #ffd1d1 100%);
+  color: #8c007ecc;
+}

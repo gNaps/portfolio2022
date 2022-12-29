@@ -21,9 +21,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`mx-auto mt-8 p-3 flex justify-between gap-12 ${
-          styles.nav
-        } ${theme === "dark" ? "dark" : ""}`}
+        className={`mx-auto mt-8 p-3 flex justify-between gap-12 ${styles.nav}`}
       >
         <ul
           className={`list-none hidden md:flex justify-center items-center gap-6 ${styles.navbar}`}
@@ -38,20 +36,16 @@ const Navbar = () => {
           >
             <Link href="/about">about</Link>
           </li>
-          <li
-            className={router.pathname === "/about" ? `${styles.active}` : ""}
-          >
-            <Link href="/about">work</Link>
+          <li className={router.pathname === "/work" ? `${styles.active}` : ""}>
+            <Link href="/work">work</Link>
+          </li>
+          <li className={router.pathname == "/story" ? `${styles.active}` : ""}>
+            <Link href="/story">story</Link>
           </li>
           <li
-            className={router.pathname == "/resume" ? `${styles.active}` : ""}
+            className={router.pathname == "/timeline" ? `${styles.active}` : ""}
           >
-            <Link href="/resume">story</Link>
-          </li>
-          <li
-            className={router.pathname == "/resume" ? `${styles.active}` : ""}
-          >
-            <Link href="/resume">timeline</Link>
+            <Link href="/timeline">timeline</Link>
           </li>
           <div className="dropdown">
             <label tabIndex={0} className="m-1 flex items-center gap-1">

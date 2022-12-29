@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useTheme } from "../../context/ThemeContext";
 import styles from "../../styles/Story.module.scss";
 
-const Story = ({ story }: any) => {
+const Article = ({ story }: any) => {
   const theme = useTheme();
   return (
     <div className="mb-10">
@@ -15,4 +15,4 @@ const Story = ({ story }: any) => {
   );
 };
 
-export default Story;
+export default Article;
