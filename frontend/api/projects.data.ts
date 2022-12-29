@@ -3,7 +3,6 @@ export interface Projects {
   title: string;
   description: string;
   slug: string;
-  isHome: boolean;
   url: string;
 }
 
@@ -13,7 +12,6 @@ export const projects: Projects[] = [
     title: "OakBot",
     description: "Telegram bot for pokemon trainer",
     slug: "oakbot",
-    isHome: true,
     url: "https://t.me/napsryu_pokedex_bot",
   },
   {
@@ -21,7 +19,6 @@ export const projects: Projects[] = [
     title: "Pokerdle",
     description: "Wordle mini games with pokemons",
     slug: "pokerdle",
-    isHome: true,
     url: "https://pokerdle.vercel.app/",
   },
   {
@@ -29,7 +26,6 @@ export const projects: Projects[] = [
     title: "Desiderando",
     description: "Web applications for giftlists",
     slug: "desiderando",
-    isHome: true,
     url: "https://github.com/gNaps/desiderando-api",
   },
   {
@@ -37,7 +33,6 @@ export const projects: Projects[] = [
     title: "Magic link",
     description: "API for passwordless login",
     slug: "magic-link",
-    isHome: true,
     url: "https://github.com/gNaps/magic-link-prisma",
   },
   {
@@ -45,7 +40,6 @@ export const projects: Projects[] = [
     title: "Flownerd",
     description: "Social network for nerd guys",
     slug: "flownerd",
-    isHome: true,
     url: "https://github.com/gNaps/flownerd-backend",
   },
   {
@@ -53,7 +47,6 @@ export const projects: Projects[] = [
     title: "Licks NFT",
     description: "Musical NFT generator",
     slug: "licks-nft",
-    isHome: true,
     url: "https://github.com/gNaps/Chainlink-Random-Licks",
   },
 ];

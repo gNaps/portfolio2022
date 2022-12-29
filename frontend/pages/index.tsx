@@ -11,8 +11,8 @@ import Hello from "../components/shared/Hello";
 export const getStaticProps: GetStaticProps<HomeProps> = async (context) => {
   return {
     props: {
-      projects: projects.filter((p) => p.isHome),
-      stories: story.filter((s) => s.isHome),
+      projects: projects.slice(0, 6),
+      stories: story.slice(0, 2),
     },
   };
 };

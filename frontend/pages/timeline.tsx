@@ -3,12 +3,11 @@ import { events } from "../api/events.data";
 import { TimelineProps } from "../api/models/TimelineProps";
 import Layout from "../components/layoutapp/Layout";
 import Job from "../components/shared/Job";
-import { sortList } from "../utils/utils";
 
 export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {
-      events: sortList(events, "id", "desc"),
+      events: events,
     },
   };
 };
