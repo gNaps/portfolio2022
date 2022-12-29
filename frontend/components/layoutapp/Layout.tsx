@@ -16,7 +16,7 @@ const Layout = (props: any) => {
         <title>Gabriele Napoli</title>
       </Head>
       <Navbar />
-      <main className="h-full w-100 md:w-140 px-5 md:px-0 mx-auto">
+      <main className="h-full w-100 md:w-140 px-5 md:px-0 mx-auto flex-1">
         {props.children}
       </main>
       <Footer />

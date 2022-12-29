@@ -213,3 +213,7 @@ a:hover {
   grid-row-start: 6;
   grid-row-end: 10;
 }
+
+.stack-icons {
+  font-size: 2.5rem;
+}
