@@ -118,25 +118,26 @@ const Navbar = () => {
               }`}
             >
               <li>
-                <a>about</a>
+                <Link href="/about">about</Link>
               </li>
               <li>
-                <a>work</a>
+                <Link href="/work">work</Link>
               </li>
               <li>
-                <a>story</a>
+                <Link href="/story">story</Link>
               </li>
               <li>
-                <a>timeline</a>
+                <Link href="/timeline">timeline</Link>
               </li>
               <li>
                 <a>booshelf</a>
+                <Link href="/bookshelf">bookshelf</Link>
               </li>
               <li>
-                <a>stack</a>
+                <Link href="/stack">stack</Link>
               </li>
               <li>
-                <a>links</a>
+                <Link href="/links">links</Link>
               </li>
             </ul>
           </div>
