@@ -76,9 +76,24 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="flex justify-center items-center gap-3 text-lg">
-          <FiGithub />
-          <FiInstagram />
-          <FiLinkedin />
+          <Link href="https://github.com/gNaps" passHref={true}>
+            <a target="_blank" rel="noreferrer">
+              <FiGithub />
+            </a>
+          </Link>
+          <Link href="https://www.instagram.com/napsryu" passHref={true}>
+            <a target="_blank" rel="noreferrer">
+              <FiInstagram />
+            </a>
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/gabriele-napoli-a87529185"
+            passHref={true}
+          >
+            <a target="_blank" rel="noreferrer">
+              <FiLinkedin />
+            </a>
+          </Link>
           <RxDividerVertical className="opacity-25 text-xl" />
           {theme === "light" ? (
             <FiMoon onClick={() => toggleTheme("dark")} />
