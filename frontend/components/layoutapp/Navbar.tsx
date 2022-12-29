@@ -60,7 +60,7 @@ const Navbar = () => {
               }`}
             >
               <li>
-                <Link href="/bookshelf">booshelf</Link>
+                <Link href="/bookshelf">bookshelf</Link>
               </li>
               <li>
                 <Link href="/stack">stack</Link>
