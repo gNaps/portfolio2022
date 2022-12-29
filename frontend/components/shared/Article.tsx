@@ -1,9 +1,7 @@
 import Link from "next/link";
-import { useTheme } from "../../context/ThemeContext";
 import styles from "../../styles/Story.module.scss";
 
 const Article = ({ story }: any) => {
-  const theme = useTheme();
   return (
     <div className="mb-10">
       <Link href={story.url} passHref={true}>

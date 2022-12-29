@@ -11,13 +11,10 @@ import {
   FiMenu,
 } from "react-icons/fi";
 import { RxDividerVertical } from "react-icons/rx";
-//import { useTheme, useToggleTheme } from "../../context/ThemeContext";
 import { useTheme } from "next-themes";
 
 const Navbar = () => {
   const router = useRouter();
-  // const theme = useTheme();
-  // const toggleTheme = useToggleTheme();
   const { theme, setTheme, resolvedTheme } = useTheme();
 
   return (
