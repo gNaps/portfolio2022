@@ -65,6 +65,13 @@ const Navbar = () => {
               <li>
                 <Link href="/links">links</Link>
               </li>
+              <li>
+                <Link href="/CV_Gabriele_Napoli_2022.pdf" passHref={true}>
+                  <a target={"_blank"} rel="noreferrer">
+                    curriculum
+                  </a>
+                </Link>
+              </li>
             </ul>
           </div>
         </ul>
