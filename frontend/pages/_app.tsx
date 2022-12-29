@@ -1,12 +1,13 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { ThemeContextProvider } from "../context/ThemeContext";
+import { ThemeProvider } from "next-themes";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeContextProvider>
+    <ThemeProvider attribute="class" defaultTheme={"system"}>
       <Component {...pageProps} />
-    </ThemeContextProvider>
+    </ThemeProvider>
   );
 }
 
