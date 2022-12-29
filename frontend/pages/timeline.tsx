@@ -13,13 +13,12 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 const Timeline = ({ events }: any) => {
-  console.log("events", events);
   return (
     <Layout>
       <div className="flex flex-col items-center justify-center mt-8">
         <h1 className="page-title page-title-timeline">Timeline</h1>
         <p className="page-subtitle">
-          Some of the most important moments of my career
+          Some of the most important moments of my career.
         </p>
       </div>
       <div className="mt-10">

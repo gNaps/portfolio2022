@@ -57,13 +57,13 @@ const Navbar = () => {
               className={`dropdown-content menu mt-4 p-2 rounded bg-black`}
             >
               <li>
-                <a>booshelf</a>
+                <Link href="/bookshelf">booshelf</Link>
               </li>
               <li>
-                <a>stack</a>
+                <Link href="/stack">stack</Link>
               </li>
               <li>
-                <a>links</a>
+                <Link href="/links">links</Link>
               </li>
             </ul>
           </div>
