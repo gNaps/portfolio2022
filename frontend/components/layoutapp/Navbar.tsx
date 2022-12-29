@@ -53,7 +53,9 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className={`dropdown-content menu mt-4 p-2 rounded bg-black`}
+              className={`dropdown-content menu mt-4 p-2 rounded  ${
+                darkMode.value ? "bg-black" : "bg-white"
+              }`}
             >
               <li>
                 <Link href="/bookshelf">booshelf</Link>
